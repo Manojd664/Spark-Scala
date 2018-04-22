@@ -9,8 +9,6 @@ object Driver extends App {
   val sparkSession=SparkSession.builder().master("local").appName("LearnScalaSpark").getOrCreate()
   
   //Starting word Count process
-  //WordCount.executeWordCount(sparkSession)
-  
-  
+  WordCount.executeWordCount(sparkSession)
   
 }

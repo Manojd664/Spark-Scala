@@ -9,7 +9,7 @@ object WordCount{
     println("starting word count process ")
     
     //Reading input file and creating rdd with no of partitions 5
-    val bookRDD=sparkSession.sparkContext.textFile("inputFiles//wordcount//metamorphosis.txt", 5)
+    val bookRDD=sparkSession.sparkContext.textFile("inputFiles//wordcount//metamorphosis.txt", 4)
     
     //Regex to clean text
     val pat = """[^\w\s\$]"""
@@ -22,6 +22,7 @@ object WordCount{
     val wordCountMapRDD=wordMapRDD.reduceByKey(_+_)
     
     wordCountMapRDD.saveAsTextFile("outputfiles//wordCount//wordcount.txt")
+    
     
     
   }
