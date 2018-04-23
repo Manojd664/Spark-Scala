@@ -4,6 +4,8 @@ import org.apache.spark.sql.SparkSession
 import com.spark.scala.learnscala.wordcount.WordCount
 import com.spark.scala.learnscala.dataframe.WaysToCreateDFs
 import com.spark.scala.learnscala.dynamicsqlquery.DynamicSQLQueryBuilder
+import com.spark.scala.learnscala.dataframeanalysis.DataFrameAnalysis
+import com.spark.scala.learnscala.ml.MachineLearniingEx
 
 object Driver extends App {
   
@@ -17,5 +19,11 @@ object Driver extends App {
   //WaysToCreateDFs.executeWaysToCreateDFs(sparkSession)
   
   //Starting dynamic query builder
-  DynamicSQLQueryBuilder.executeDSQLQueryBuilder(sparkSession)
+  //DynamicSQLQueryBuilder.executeDSQLQueryBuilder(sparkSession)
+  
+  //Starting Data Analysis on structure data
+ // DataFrameAnalysis.executeDataFrameAnalysis(sparkSession)
+  
+  //Starting Machine Learning example
+  MachineLearniingEx.executeMachineLearningEx(sparkSession)
 }
