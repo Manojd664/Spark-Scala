@@ -5,7 +5,7 @@ import com.spark.scala.learnscala.wordcount.WordCount
 import com.spark.scala.learnscala.dataframe.WaysToCreateDFs
 import com.spark.scala.learnscala.dynamicsqlquery.DynamicSQLQueryBuilder
 import com.spark.scala.learnscala.dataframeanalysis.DataFrameAnalysis
-import com.spark.scala.learnscala.ml.MachineLearniingEx
+import com.spark.scala.learnscala.ml.LinearRegression
 
 object Driver extends App {
   
@@ -24,6 +24,6 @@ object Driver extends App {
   //Starting Data Analysis on structure data
  // DataFrameAnalysis.executeDataFrameAnalysis(sparkSession)
   
-  //Starting Machine Learning example
-  MachineLearniingEx.executeMachineLearningEx(sparkSession)
+  //Starting Linear Regression
+  LinearRegression.executeLinearRegression(sparkSession)
 }

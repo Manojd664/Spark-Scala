@@ -1,14 +1,14 @@
 package com.spark.scala.learnscala.ml
 
-import org.apache.spark.ml.regression.LinearRegression
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.ml.feature.RFormula
-object MachineLearniingEx {
-   
-  def executeMachineLearningEx(sparkSession:SparkSession)
+import org.apache.spark.ml.regression.LinearRegression
+
+object LinearRegression {
+  
+  def executeLinearRegression(sparkSession:SparkSession)
   {
-    
-    //Create Dataframe of train data
+     //Create Dataframe of train data
     val trainDf=sparkSession.read.format("csv").option("header", "true").load("Inputfiles//dataAnalysisAndML//train.csv")
     
     //Creating Dataframe of test data
